@@ -89,9 +89,6 @@ export const listMercancias = /* GraphQL */ `
         author
         featured
         price
-        orders {
-          nextToken
-        }
         createdAt
         updatedAt
       }
