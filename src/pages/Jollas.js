@@ -1,18 +1,18 @@
 import React, { useContext } from 'react'
 import { Link } from "react-router-dom";
-import { JollaContext } from '../context/jollas';
+import { MercanciaContext } from '../context/jollas';
 
 
-const Books = () => {
-    const { jollas } = useContext(JollaContext);
+const Jollas = () => {
+    const { jollas } = useContext(MercanciaContext);
 
     if (!jollas.length) {
-        return <h3>No Books Available</h3>
+        return <h3>No hay Jollas disponibles</h3>
     }
 
     return (
         <section className="books">
-            {jollas.map(({ image: image, id, title }) => (
+            {jollas.map(({ image, id, title }) => (
                 <article key={id} className="book">
                     <div className="book-image">
                         <img src={image} alt={title} />
@@ -24,4 +24,4 @@ const Books = () => {
     )
 }
 
-export default Books
+export default Jollas
