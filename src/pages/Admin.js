@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import { API, graphqlOperation, Storage } from "aws-amplify";
 import {AmplifyAuthenticator,AmplifySignOut} from '@aws-amplify/ui-react'
-import {createJolla } from '../graphql/mutations'
+import {createMercancia } from '../graphql/mutations'
 import config from '../aws-exports'
 
 
@@ -20,7 +20,7 @@ const Admin = () => {
         e.preventDefault();
         try {
             if (!setJollaDetails.title || !setJollaDetails.price) return
-            await API.graphql(graphqlOperation(createJolla, { input: jollaDetails }))
+            await API.graphql(graphqlOperation(createMercancia, { input: jollaDetails }))
             setJollaDetails({ title: "", description: "", image: "", author: "", price: "" })
         } catch (err) {
             console.log('error creating todo:', err)
