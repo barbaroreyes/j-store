@@ -22,7 +22,7 @@
         },
         "initPayment": {
           "deploymentBucketName": "amplify-jstore-dev-41956-deployment",
-          "s3Key": "amplify-builds/initPayment-4a466d54777952445a49-build.zip"
+          "s3Key": "amplify-builds/initPayment-6d67656e664543303839-build.zip"
         }
       }
     }
