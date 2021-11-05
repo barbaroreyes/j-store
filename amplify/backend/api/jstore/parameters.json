@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "jstore",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authjstore4591aff2",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
